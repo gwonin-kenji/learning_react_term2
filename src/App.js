@@ -3,8 +3,6 @@ import { ChildArea } from "./components/ChildArea";
 import "./styles.css";
 
 export const App = () => {
-  console.log("rendering");
-
   const [text, setText] = useState("");
   const [open, setOpen] = useState(false);
 
