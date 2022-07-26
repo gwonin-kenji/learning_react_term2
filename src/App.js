@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { ChildArea } from "./components/ChildArea";
 import "./styles.css";
 
@@ -9,6 +9,9 @@ export const App = () => {
   const onChangeText = (e) => setText(e.target.value);
 
   const onClickOpen = () => setOpen(!open);
+
+  const temp = useMemo(() => 1 + 3, []);
+  console.log(temp);
 
   const onClickClose = useCallback(() => setOpen(false), [setOpen]);
 
